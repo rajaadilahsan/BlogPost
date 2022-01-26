@@ -1,8 +1,9 @@
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy 
 from distutils.log import debug
 from email.policy import default
 from turtle import title
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy 
+
 
 
 
@@ -13,4 +14,4 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db=SQLAlchemy(app)
 
-from app import routes
+from flaskblog import routes

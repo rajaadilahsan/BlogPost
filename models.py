@@ -1,5 +1,7 @@
 from datetime import datetime
-from __main__ import db 
+from flaskblog import db 
+from enum import unique
+from linecache import lazycache
 
 
 class User(db.Model):
@@ -22,3 +24,4 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{ self.title }', '{ self.date_posted }')"
+
